@@ -1,0 +1,15 @@
+mixin card-product(title, image, price, count = 14)
+	+b.card-product&attributes(attributes)
+		+e.H2.title #{title}
+		+e.image
+			img(src=("images/" + image) alt=title)
+		+e.price $#{price}
+		+e.description
+			block
+		+e.counter
+			+b.product-count
+				+e.SPAN.but.js-plus -
+				+e.INPUT.number.js-counter(type='number' min='1' value=count)
+				+e.SPAN.but.js-minus +
+			+e.SPAN.count шт
+		+e.BUTTON.button buy now
