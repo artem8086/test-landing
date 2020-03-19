@@ -7,7 +7,8 @@ const
 	uglify = require('gulp-uglify-es').default,
 	clean = require('gulp-clean'),
 	rollup = require('gulp-rollup'),
-	copy = require('gulp-copy');
+	copy = require('gulp-copy'),
+	sourcemaps = require('gulp-sourcemaps');
 
 const { src, dest, watch, series } = require('gulp');
 
@@ -20,7 +21,7 @@ function assetsT(cb) {
 function connectT(cb) {
 	connect.server({
 		port: 3000,
-		livereload: on,
+		livereload: true,
 		root: './dist'
 	});
 	cb();
@@ -40,7 +41,7 @@ function stylusT(cb) {
 		.pipe(stylus({compress: true}))
 			.on('error', console.log)
 		.pipe(dest('dist/styles'))
-		.pipe(onnect.reload());
+		.pipe(connect.reload());
 	cb();
 }
 

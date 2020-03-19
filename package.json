@@ -4,6 +4,7 @@
   "description": "Some test landing page",
   "main": "index.js",
   "scripts": {
+    "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,18 @@
   "bugs": {
     "url": "https://github.com/artem8086/test-landing/issues"
   },
-  "homepage": "https://github.com/artem8086/test-landing#readme"
+  "homepage": "https://github.com/artem8086/test-landing#readme",
+  "dependencies": {
+    "bemto.jade": "^1.0.3",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-rollup": "^2.17.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify-es": "^2.0.0",
+    "jade-injected": "^1.0.2"
+  }
 }
