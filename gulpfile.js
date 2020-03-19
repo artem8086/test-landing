@@ -8,13 +8,14 @@ const
 	clean = require('gulp-clean'),
 	rollup = require('gulp-rollup'),
 	copy = require('gulp-copy'),
-	sourcemaps = require('gulp-sourcemaps');
+	sourcemaps = require('gulp-sourcemaps'),
+	autoprefixer = require('gulp-autoprefixer');
 
 const { src, dest, watch, series } = require('gulp');
 
 function assetsT(cb) {
 	src('app/data/**/*.*')
-		.pipe(copy('dist/', { prefix: 1 }));
+		.pipe(copy('dist/', { prefix: 2 }));
 	cb();
 };
 
@@ -40,6 +41,7 @@ function stylusT(cb) {
 	src('app/styles/*.styl')
 		.pipe(stylus({compress: true}))
 			.on('error', console.log)
+		.pipe(autoprefixer({cascade: false}))
 		.pipe(dest('dist/styles'))
 		.pipe(connect.reload());
 	cb();

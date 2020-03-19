@@ -1,0 +1,130 @@
+
+.header
+	width 100%
+	height 100vh
+	min-height 659px
+	padding 37px 0 0
+	background-color $header-color
+	background-size cover
+	background-position center
+	background-image url('../images/header_bg.png')
+	
+	&>.container
+		position relative
+
+	&__flying-image
+		position absolute
+		bottom -326px
+		user-select none
+		pointer-events none
+		trsansform-origin center
+		animation header-flying 8s ease-in-out infinite
+
+@keyframes header-flying
+	from
+		transform translateY(0)
+	50%
+		transform translateY(80px)
+	to
+		transform translateY(0)
+
+.top-nav
+	display flex
+	flex-direction row
+	justify-content flex-end
+	height 52px
+
+	&__link
+		padding 15px 63px
+		margin 0 -36px
+		color $nav-link-color
+		text-align center
+		vertical-align middle
+		font-family 'Lato', sans-serif
+		font-size 18px
+		font-weight 500
+		letter-spacing 0.45px
+		text-transform uppercase
+		text-decoration none
+		transition: color $transition-duration ease-in-out,
+			margin $transition-duration ease-in-out
+
+		&:hover
+			color $nav-link-hover-color
+
+		&.active
+			margin 0
+			box-shadow 0 10px 37px rgba(0, 0, 0, 0.21)
+			border-radius 26px
+			color $main-color
+			background-color $nav-link-color
+			font-weight 700
+			
+			&:hover
+				color $nav-link-hover-color
+
+.header-content
+	display flex
+	flex-direction row-reverse
+	justify-content flex-start
+
+.header-panel
+	padding-left 20px
+	// width 50%
+	
+	&__text
+		padding-bottom 30px
+		color $text-light
+		font-family 'Lato', sans-serif
+		font-size 24px
+		font-weight 400
+		line-height 30px
+		
+		&_header
+			padding 80px 0 50px
+			font-size 36px
+			font-weight 900
+			letter-spacing 0.9px
+			text-transform uppercase
+		
+		&_bold
+			font-weight 700
+			line-height 37px
+
+.header-img
+	position relative
+	&__image
+		margin-left -109px
+		margin-top -13px
+	
+	&__text
+		position absolute
+		text-align center
+		color #fff
+		font-family "Qanelas Soft"
+		font-size 51px
+		font-weight 400
+		trsansform-origin center
+		
+		&_t1
+			top 238px
+			left -30px
+			color #ff9000
+			font-size 54px
+			text-transform uppercase
+			line-height 52.35px
+			transform rotate(-9deg)
+
+		&_t2
+			top 192px
+			left 303px
+			line-height 49.8px
+			transform rotate(-8deg)
+
+		&_t3
+			top 82px
+			left 198px
+			line-height 50.16px
+			transform rotate(-2deg)
+	
+		
