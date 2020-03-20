@@ -1,0 +1,144 @@
+.footer
+	position relative
+	width 100%
+	padding 42px 0 44px
+	background-size cover
+	background-position center
+	background-image url('../images/footer_bg.png')
+
+	&__contact
+		padding-bottom 36px
+		color $text-light
+		font-size 22px
+		font-weight 400
+
+		&_phone
+			padding-bottom 0
+			font-size 24px
+			line-height 35px
+			text-transform uppercase
+
+	&__copy
+		color $text-light
+		font-size 16px
+		font-weight 400
+
+.socials
+	display flex
+	justify-content space-between
+	width 354px
+	margin 0 auto
+	margin-bottom 43px
+
+	&__but
+		display inline-block
+		width 59px
+		height 59px
+		border 1px solid #ffffff
+		border-radius 50%
+		background-repeat no-repeat
+		background-position center
+		background-color transparent
+		transition all $transition-duration ease-in-out
+		&:hover
+			box-shadow 0 0 21px rgba(9, 9, 9, 0.28)
+
+		&_facebook
+			background-image url('../images/facebook_logo.svg')
+		
+		&_google
+			background-color #fff
+			background-image url('../images/g-plus_logo.svg')
+		
+		&_linked-in
+			background-image url('../images/linked-in_logo.svg')
+
+		&_youtube
+			background-image url('../images/youtube_logo.png')
+		
+
+.foot-links
+	display inline-flex
+	justify-content space-between
+	margin-bottom 35px
+	width 478px
+
+	&__link
+		color $text-light
+		font-size 20px
+		font-weight 400
+		text-decoration none
+		
+		&:hover
+			text-decoration underline
+
+.foot-flying
+	position absolute
+	bottom 0
+	left 0
+	animation footer-flying 24s linear infinite
+
+	&__image
+		position relative
+		pointer-evnts none
+		user-select none
+
+	&__ring
+		position absolute
+		top 110px
+		left 450px
+		background-color transparent
+		border 3px solid #63eba3
+		border-radius 50%
+		transform-origin center
+		transform translate(-50%, -50%) scale(0)
+		pointer-evnts none
+		user-select none
+		animation-duration 8s
+		animation-iteration-count infinite
+		animation-timing-function ease-in-out
+	
+		&_r1
+			width 150px
+			height 150px
+			animation-name ring2
+		
+		&_r2
+			width 184px
+			height 184px
+			opacity .9
+			animation-name ring1
+
+		&_r3
+			width 300px
+			height 300px
+			opacity .8
+			animation-name ring2
+		
+		&_r4
+			width 400px
+			height 400px
+			opacity .7
+			animation-name ring1
+		
+
+@keyframes footer-flying
+	from
+		bottom -100px
+		left -200px
+	50%
+		bottom 0
+		left 0px
+	to
+		bottom -100px
+		left -200px
+
+@keyframes ring1
+	to
+		transform translate(-50%, -50%) scale(1.6)
+		opacity 0
+
+@keyframes ring2
+	to
+		transform translate(-50%, -50%) scale(1.8)
+		opacity 0
