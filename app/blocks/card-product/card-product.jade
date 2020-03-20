@@ -8,8 +8,8 @@ mixin card-product(title, image, price, count = 14)
 			block
 		+e.counter
 			+b.product-count
-				+e.SPAN.but.js-plus -
+				+e.SPAN.but.js-minus -
 				+e.INPUT.number.js-counter(type='number' min='1' value=count)
-				+e.SPAN.but.js-minus +
+				+e.SPAN.but.js-plus +
 			+e.SPAN.count шт
 		+e.BUTTON.button buy now
