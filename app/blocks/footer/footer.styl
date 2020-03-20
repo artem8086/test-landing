@@ -6,6 +6,9 @@
 	background-position center
 	background-image url('../images/footer_bg.png')
 
+	&>.container	
+		text-align center
+
 	&__contact
 		padding-bottom 36px
 		color $text-light
@@ -124,13 +127,10 @@
 
 @keyframes footer-flying
 	from
-		bottom -100px
 		left -200px
 	50%
-		bottom 0
 		left 0px
 	to
-		bottom -100px
 		left -200px
 
 @keyframes ring1
