@@ -1,10 +1,21 @@
+// Nav links
 var links = $('.top-nav__link');
 
-links.click(function() {
+function smoothScroll(event) {
+	event.preventDefault();
+	var id  = $(this).attr('href'),
+		top = $(id).offset().top;
+	$('body,html').animate({scrollTop: top}, 500);
+}
+
+links.click(function(event) {
 	links.removeClass('active');
 	$(this).addClass('active');
+	smoothScroll.call(this, event);
 });
 
+
+// Counter buttons
 function setCounter(button, value) {
 	var counter = $('.js-counter', $(button).parent()),
 		value = + counter.val() + value,
