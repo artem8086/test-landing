@@ -1,0 +1,23 @@
++b.SECTION.section2
+	+e.container
+		+e.H1.title A couple of steps to make your store popular
+
+		+b.sec2-tabs
+			+e.tab.js-tab.active(data-tab='#step1') Step 1
+			+e.tab.js-tab(data-tab='#step2') Step 2
+			+e.tab.js-tab(data-tab='#step3') Step 3
+
+		//- each tab in [1, 2, 3]
+		+b.sec2-tab
+			+e.description
+				| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+
+			+b.sec2-forms
+				+e.INPUT.form(type='text' placeholder='Enter First Name')
+				+e.INPUT.form(type='text' placeholder='Enter Last Name')
+				+e.INPUT.form(type='email' placeholder='Enter Email')
+
+			+e.BUTTON.submit.js-submit Next
+
+		+e.backwall
+			+e.flying-image(src='images/beacon.png' alt='Beacon')

@@ -32,29 +32,32 @@
 	display flex
 	flex-direction row
 	justify-content flex-end
-	height 52px
+	margin-right -63px
 
 	&__link
-		padding 15px 63px
-		margin 0 -36px
+		padding 0 46px
+		margin 0
+		// margin 0 -17px
 		color $nav-link-color
 		text-align center
 		vertical-align middle
 		font-size 18px
 		font-weight 500
+		line-height 52px
 		letter-spacing 0.45px
 		text-transform uppercase
 		text-decoration none
-		transition color $transition-duration ease-in-out,
-			margin $transition-duration ease-in-out
+		border-radius 26px
+		transition all $transition-duration ease-in-out
 
 		&:hover
 			color $nav-link-hover-color
 
 		&.active
-			margin 0
+			padding 0 63px
+			margin 0 -17px
+			// margin 0
 			box-shadow 0 10px 37px rgba(0, 0, 0, 0.21)
-			border-radius 26px
 			color $main-color
 			background-color $nav-link-color
 			font-weight 700
@@ -68,13 +71,13 @@
 	justify-content flex-start
 
 .header-panel
-	padding-left 20px
+	padding-left 24px
 	// width 50%
 	
 	&__text
 		padding-bottom 30px
 		color $text-light
-		font-size 24px
+		font-size 18px
 		font-weight 400
 		line-height 30px
 		
@@ -86,6 +89,7 @@
 			text-transform uppercase
 		
 		&_bold
+			font-size 24px
 			font-weight 700
 			line-height 37px
 
@@ -94,6 +98,8 @@
 	&__image
 		margin-left -109px
 		margin-top -37px
+		pointer-events none
+		user-select none
 	
 	&__text
 		position absolute

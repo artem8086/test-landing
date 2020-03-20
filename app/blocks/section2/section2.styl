@@ -1,0 +1,122 @@
+.section2
+	width 100%
+	background-size cover
+	background-position center
+	background-image url('../images/sec2_bg.png')
+	
+	&__title
+		padding-bottom 25px
+		color #171717
+		text-align center
+		font-family 'Lato', sans-serif
+		font-size 36px
+		font-weight 700
+	
+	&__container
+		position relative
+		padding 50px 0 46px
+		width 968px
+		margin 0 auto
+		height 100%
+	
+	&__backwall
+		position absolute
+		top 0
+		right -316px
+		width 316px
+		height 100%
+		background-image url('../images/wall.png')
+		background-size 100%
+
+	&__flying-image
+		position absolute
+		top -35px
+		right 0
+		user-select none
+		pointer-events none
+		trsansform-origin center
+		animation section2-flying 8s ease-in-out infinite
+
+@keyframes section2-flying
+	from
+		transform rotate(0)
+	50%
+		transform rotate(10deg)
+	to
+		transform rotate(0)
+
+@media screen and (max-width: 968px)
+	.section2
+		&__container
+			width 100%
+
+.sec2-tabs
+	display flex
+	flex-direction row
+	justify-content space-around
+	padding 0 198px 38px
+
+	&__tab
+		padding 0 18px
+		margin 0 18px
+		color $dark-text
+		text-align center
+		vertical-align middle
+		font-size 22px
+		font-weight 900
+		line-height 52px
+		letter-spacing 0.45px
+		text-transform uppercase
+		text-decoration none
+		border-radius 26px
+		transition all $transition-duration ease-in-out
+
+		&.active
+			padding 0 36px
+			margin 0
+			box-shadow 0 15px 29px rgba(60, 171, 112, 0.63)
+			background-color $nav-link-color
+			
+			&:hover
+				color $nav-link-hover-color
+
+.sec2-tab
+	text-align center
+
+	&__description
+		padding-bottom 41px
+		text-align left
+		color $dark-text
+		font-size 24px
+		font-weight 700
+	
+	&__submit
+		padding 0 65px
+		color $main-color
+		font-size 27px
+		font-weight 700
+		letter-spacing 0.42px
+		line-height 59px
+		border none
+		border-radius 28px
+		background-color #fff
+		box-shadow 0 15px 29px rgba(60, 171, 112, 0.63)
+		transition all $transition-duration ease-in-out
+		&:hover
+			color $dark-text
+
+.sec2-forms
+	padding 0 178px
+	margin-bottom 35px
+	&__form
+		padding 0 41px
+		margin-bottom 24px
+		width 100%
+		background-color rgba(255, 255, 255, .5)
+		font-size 27px
+		color $dark-text
+		line-height 52px
+		border-radius 26px
+		border 3px solid  #fff
+		&:last-child
+			margin-bottom 0
