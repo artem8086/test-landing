@@ -3,7 +3,8 @@
 	background-size cover
 	background-position center
 	background-image url('../images/sec2_bg.png')
-	
+	overflow visible
+
 	&__title
 		padding-bottom 25px
 		color #171717
@@ -25,7 +26,7 @@
 		width 316px
 		height 100%
 		background-image url('../images/wall.png')
-		background-size 100%
+		background-size cover
 
 	&__flying-image
 		position absolute
@@ -44,20 +45,16 @@
 	to
 		transform rotate(0)
 
-@media screen and (max-width: 968px)
-	.section2
-		&__container
-			width 100%
-
 .sec2-tabs
 	display flex
 	flex-direction row
 	justify-content space-around
-	padding 0 198px 38px
+	flex-wrap wrap
+	padding 0 198px
 
 	&__tab
 		padding 0 18px
-		margin 0 18px
+		margin 0 18px 38px
 		color $dark-text
 		text-align center
 		vertical-align middle
@@ -72,10 +69,10 @@
 
 		&.active
 			padding 0 36px
-			margin 0
+			margin 0 0 38px
 			box-shadow 0 15px 29px rgba(60, 171, 112, 0.63)
 			background-color $nav-link-color
-			
+
 			&:hover
 				color $nav-link-hover-color
 
@@ -119,3 +116,23 @@
 		border 3px solid  #fff
 		&:last-child
 			margin-bottom 0
+
+@media screen and (max-width: 968px)
+	.section2
+		&__container
+			padding 50px 24px 46px
+			width 100%
+	
+	.sec2-tabs
+		padding 0 98px
+
+	.sec2-forms
+		padding 0 78px
+
+@media screen and (max-width: 768px)
+	.sec2-tabs
+		padding 0
+
+@media screen and (max-width: 480px)
+	.sec2-forms
+		padding 0 16px
