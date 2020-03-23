@@ -8,16 +8,29 @@
 			+e.tab.js-tab(data-tab='#step3') Step 3
 
 		//- each tab in [1, 2, 3]
-		+b.sec2-tab
+		+b.FORM.sec2-tab(action="#" method="get")
 			+e.description
 				| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
 
+			
 			+b.sec2-forms
-				+e.INPUT.form(type='text' placeholder='Enter First Name')
-				+e.INPUT.form(type='text' placeholder='Enter Last Name')
-				+e.INPUT.form(type='email' placeholder='Enter Email')
+				+e.INPUT.form#FirstName(
+					type='text'
+					name='FirstName'
+					placeholder='Enter First Name'
+					required)
+				+e.INPUT.form#LastName(
+					type='text'
+					name='LastName'
+					placeholder='Enter Last Name'
+					required)
+				+e.INPUT.form.js-email#Email(
+					type='email'
+					name='Email'
+					placeholder='Enter Email'
+					required)
 
-			+e.BUTTON.submit.js-submit Next
+			+e.BUTTON.submit.js-submit(type="submit") Next
 
 		+e.backwall
 			+e.flying-image(src='images/beacon.png' alt='Beacon')

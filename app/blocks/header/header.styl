@@ -2,7 +2,7 @@
 .header
 	width 100%
 	min-height 100vh
-	padding 37px 0 0
+	padding 38px 0 0
 	background-color $header-color
 	background-size cover
 	background-position center
@@ -13,7 +13,8 @@
 
 	&__flying-image
 		position absolute
-		bottom -326px
+		bottom -368px
+		left -90px
 		user-select none
 		pointer-events none
 		trsansform-origin center
@@ -31,7 +32,7 @@
 	display flex
 	flex-direction row
 	justify-content flex-end
-	margin-right -63px
+	margin-right -48px
 
 	&__link
 		padding 0 46px
@@ -53,8 +54,8 @@
 			color $nav-link-hover-color
 
 		&.active
-			padding 0 63px
-			margin 0 -17px
+			padding 0 42px
+			margin 0 -15px
 			// margin 0
 			box-shadow 0 10px 37px rgba(0, 0, 0, 0.21)
 			color $main-color
@@ -69,14 +70,12 @@
 	flex-direction row-reverse
 	justify-content flex-start
 	padding-bottom 48px
-	// flex-wrap wrap
 
 .header-panel
 	padding-left 24px
-	// width 50%
 	
 	&__text
-		padding-bottom 30px
+		padding-bottom 20px
 		color $text-light
 		font-size 18px
 		font-weight 400
@@ -92,10 +91,12 @@
 		&_bold
 			font-size 24px
 			font-weight 700
-			line-height 37px
+			line-height 33px
+			letter-spacing -0.24px
 
 .header-img
 	position relative
+	transform-origin center
 	&__image
 		margin-left -109px
 		margin-top -37px
@@ -112,7 +113,7 @@
 		trsansform-origin center
 		
 		&_t1
-			top 214px
+			top 205px
 			left -30px
 			color #ff9000
 			font-size 54px
@@ -121,18 +122,18 @@
 			transform rotate(-9deg)
 
 		&_t2
-			top 168px
-			left 303px
+			top 164px
+			left 311px
 			line-height 49.8px
 			transform rotate(-8deg)
 
 		&_t3
-			top 58px
-			left 198px
+			top 54px
+			left 201px
 			line-height 50.16px
 			transform rotate(-2deg)
 
-@media screen and (max-height: 1170px)
+@media screen and (max-width: 1170px)
 	.top-nav
 		margin-right 0
 
@@ -143,10 +144,28 @@
 @media screen and (max-width: 968px)
 	.header
 		height auto
+		overflow hidden
+		
+		&__flying-image
+			display none
 
 	.header-content
 		flex-wrap wrap
+		justify-content center
 	
 	.header-panel
 		padding-left 0
+	
+	.header-img
+		margin-left 109px
+		margin-top 37px
+		transform scale(.7)
+
+@media screen and (max-width: 768px)
+	.top-nav
+		flex-direction column
+		padding 0 5%
 		
+		&__link
+			padding 0 !important
+			margin 0 !important
